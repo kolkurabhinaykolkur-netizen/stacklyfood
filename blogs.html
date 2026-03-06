@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- TOP RED BAR -->
+<div class="top-bar">
+  <div class="top-container">
+    <div class="time">09:00 am - 06:00 pm</div>
+    <div class="social">
+      <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+      <a href="404.html"><i class="fab fa-twitter"></i></a>
+      <a href="404.html"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+
+   <div class="logo-area">
+  <a href="index.html">
+    <img src="images/logo2.webp" alt="logo">
+  </a>
+</div>
+
+    <!-- NAV CENTER -->
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home <i class="fas fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-right">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="404.html" class="order-btn">Order Now</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="mobile-top">
+<img src="images/logo2.webp">
+<i class="fas fa-times" onclick="toggleMenu()"></i>
+</div>
+
+<ul>
+
+<li class="dropdown">
+
+<span onclick="toggleDropdown()">Home <i class="fas fa-chevron-down"></i></span>
+
+<ul class="dropdown-menu" id="homeDropdown">
+
+<li><a href="home2.html">Home 2</a></li>
+</ul>
+
+</li>
+
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+
+</ul>
+
+<div class="mobile-contact">
+<p>Main Street, India</p>
+<p>info@stackly.com</p>
+<p>+91 9876543210</p>
+</div>
+
+<a href="login.html" class="login-btn mobile-btn">Login</a>
+<a href="404.html" class="order-btn mobile-btn">Order Now</a>
+
+<div class="mobile-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- ===== ABOUT HERO SECTION ===== -->
+<section class="about-hero-section">
+
+<div class="about-hero-overlay"></div>
+
+<div class="about-hero-content">
+<h1>Blogs</h1>
+
+<p class="about-breadcrumb">
+Home / <span>Blogs</span>
+</p>
+
+<p class="about-description">
+At Stackly Food, we believe that food is more than just a meal — it is an experience that brings people together. Our mission is to serve delicious, fresh, and high-quality food that satisfies every craving. From spicy delights to comforting classics, every dish at Stackly Food is prepared with passion and care.
+</p>
+</div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const hero = document.querySelector(".about-hero-content");
+
+hero.style.opacity = "0";
+
+setTimeout(()=>{
+hero.style.opacity = "1";
+hero.style.transition = "1s";
+},200);
+
+}); </script>
+
+
+
+
+
+<section class="stackly-blog-section">
+
+<div class="stackly-blog-container">
+
+<!-- BLOG CARD -->
+<div class="stackly-blog-card stackly-animate">
+    
+    <div class="stackly-blog-img">
+        <img src="images/l (1).webp" alt="food">
+        <span class="stackly-date">15 Dec</span>
+    </div>
+
+    <div class="stackly-blog-content">
+        <div class="stackly-meta">
+            <span>By Admin</span>
+            <span>Chicken</span>
+        </div>
+
+        <h3>Fast Food Frenzy A Taste Of Convenience</h3>
+
+        <a href="404.html" class="stackly-readmore">
+            Read More →
+        </a>
+    </div>
+
+</div>
+
+
+<!-- BLOG CARD -->
+<div class="stackly-blog-card stackly-animate">
+
+    <div class="stackly-blog-img">
+        <img src="images/l (2).webp" alt="food">
+        <span class="stackly-date">17 Dec</span>
+    </div>
+
+    <div class="stackly-blog-content">
+
+        <div class="stackly-meta">
+            <span>By Admin</span>
+            <span>Noodles</span>
+        </div>
+
+        <h3>Benefits Of Health And Safety Measures</h3>
+
+        <a href="404.html" class="stackly-readmore">
+            Read More →
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- BLOG CARD -->
+<div class="stackly-blog-card stackly-animate">
+
+    <div class="stackly-blog-img">
+        <img src="images/l (3).webp" alt="food">
+        <span class="stackly-date">25 Dec</span>
+    </div>
+
+    <div class="stackly-blog-content">
+
+        <div class="stackly-meta">
+            <span>By Admin</span>
+            <span>Fast Food</span>
+        </div>
+
+        <h3>Quick Cravings Unraveling Fast Food Delights</h3>
+
+        <a href="404.html" class="stackly-readmore">
+            Read More →
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- BLOG CARD -->
+<div class="stackly-blog-card stackly-animate">
+
+    <div class="stackly-blog-img">
+        <img src="images/i4 (1).webp" alt="food">
+        <span class="stackly-date">15 Dec</span>
+    </div>
+
+    <div class="stackly-blog-content">
+
+        <div class="stackly-meta">
+            <span>By Admin</span>
+            <span>Burger</span>
+        </div>
+
+        <h3>Delicious Burgers With Special Flavors</h3>
+
+        <a href="404.html" class="stackly-readmore">
+            Read More →
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- BLOG CARD -->
+<div class="stackly-blog-card stackly-animate">
+
+    <div class="stackly-blog-img">
+        <img src="images/i4 (2).webp" alt="food">
+        <span class="stackly-date">17 Dec</span>
+    </div>
+
+    <div class="stackly-blog-content">
+
+        <div class="stackly-meta">
+            <span>By Admin</span>
+            <span>Special</span>
+        </div>
+
+        <h3>Taste The Best Grilled Food Experience</h3>
+
+        <a href="404.html" class="stackly-readmore">
+            Read More →
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- BLOG CARD -->
+<div class="stackly-blog-card stackly-animate">
+
+    <div class="stackly-blog-img">
+        <img src="images/i4 (3).webp" alt="food">
+        <span class="stackly-date">25 Dec</span>
+    </div>
+
+    <div class="stackly-blog-content">
+
+        <div class="stackly-meta">
+            <span>By Admin</span>
+            <span>Pasta</span>
+        </div>
+
+        <h3>Italian Pasta With Rich Flavor</h3>
+
+        <a href="404.html" class="stackly-readmore">
+            Read More →
+        </a>
+
+    </div>
+
+</div>
+
+
+</div>
+</section>
+
+
+<script>
+
+  const stacklyObserver = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+
+});
+
+},{threshold:0.2});
+
+document.querySelectorAll(".stackly-animate").forEach(el=>{
+stacklyObserver.observe(el);
+});
+</script>
+]
+
+
+
+
+<section class="stackly-blogpage">
+
+<div class="stackly-blog-wrapper">
+
+<!-- LEFT BLOG AREA -->
+<div class="stackly-blog-left">
+
+<!-- BLOG POST -->
+<div class="stackly-blog-post stackly-scroll">
+
+<div class="stackly-blog-image">
+<img src="images/nh (1).webp">
+
+</div>
+
+<div class="stackly-blog-content">
+
+<div class="stackly-blog-meta">
+<span>By Admin</span>
+<span>3 Comments</span>
+</div>
+
+<h2>There Are Many Bad Effect Of Junk Food Restaurant</h2>
+
+<p>
+Food is not just about filling hunger; it is about enjoying flavors, textures, and aromas that bring happiness to our daily lives. At Stackly Food, we focus on preparing dishes using fresh ingredients and authentic cooking methods. Every meal is crafted with care so that customers can enjoy a rich and satisfying experience. From crispy snacks to flavorful main courses, our menu is designed to delight every food lover..
+</p>
+
+<a href="404.html" class="stackly-read-btn">Read More →</a>
+
+</div>
+
+</div>
+
+
+<!-- BLOG POST -->
+<div class="stackly-blog-post stackly-scroll">
+
+<div class="stackly-blog-image">
+<img src="images/nh (2).webp">
+
+</div>
+
+<div class="stackly-blog-content">
+
+<div class="stackly-blog-meta">
+<span>By Admin</span>
+<span>2 Comments</span>
+</div>
+
+<h2>There Are Many Variations Of Foods Are Available</h2>
+
+<p>
+The secret behind great food always begins with high-quality ingredients. Fresh vegetables, premium spices, and carefully selected meats create dishes that are both delicious and nutritious. At Stackly Food, our chefs ensure that every ingredient meets high standards before it reaches your plate. This commitment to quality helps us deliver meals that are not only tasty but also healthy and satisfying.
+</p>
+
+<a href="404.html" class="stackly-read-btn">Read More →</a>
+
+</div>
+
+</div>
+
+
+<!-- BLOG POST -->
+<div class="stackly-blog-post stackly-scroll">
+
+<div class="stackly-blog-image">
+<img src="images/nh (3).webp">
+
+</div>
+
+<div class="stackly-blog-content">
+
+<div class="stackly-blog-meta">
+<span>By Admin</span>
+<span>0 Comments</span>
+</div>
+
+<h2>Avoid Health Risk Food Endure High Availability</h2>
+<p>
+Fast food has become a favorite choice for people who want quick yet tasty meals. From juicy burgers to spicy fried chicken, these dishes offer comfort and excitement in every bite. Stackly Food combines traditional flavors with modern cooking techniques to create fast food that is both flavorful and memorable. Our goal is to provide meals that are quick, delicious, and perfect for any time of the day.
+</p>
+
+<a href="404.html" class="stackly-read-btn">Read More →</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT SIDEBAR -->
+<div class="stackly-blog-sidebar">
+
+<!-- SEARCH -->
+<div class="stackly-sidebar-box">
+
+<h3>Search</h3>
+
+<div class="stackly-search-box">
+<input type="text" placeholder="Search here">
+<button>🔍</button>
+</div>
+
+</div>
+
+
+<!-- CATEGORIES -->
+<div class="stackly-sidebar-box">
+
+<h3>Categories</h3>
+
+<ul class="stackly-category-list">
+
+<li>Breakfast <span>(08)</span></li>
+<li>Restaurant <span>(11)</span></li>
+<li class="active">Dinner <span>(12)</span></li>
+<li>Fast Food <span>(18)</span></li>
+<li>Lunch <span>(07)</span></li>
+
+</ul>
+
+</div>
+
+
+<!-- RECENT POSTS -->
+<div class="stackly-sidebar-box">
+
+<h3>Recent Post</h3>
+
+<div class="stackly-recent-post">
+<img src="images/l (2).webp">
+<div>
+<p>Avoid Health Risk Food & Endure High Availability</p>
+<span>18 Dec, 2024</span>
+</div>
+</div>
+
+<div class="stackly-recent-post">
+<img src="images/l (2).webp">
+<div>
+<p>Tacking The Condition Of Your Fresh Mind</p>
+<span>18 Dec, 2024</span>
+</div>
+</div>
+
+<div class="stackly-recent-post">
+<img src="images/l (3).webp">
+<div>
+<p>What's The Holding Back The Food Solution</p>
+<span>18 Dec, 2024</span>
+</div>
+</div>
+
+</div>
+
+
+<!-- TAGS -->
+<div class="stackly-sidebar-box">
+
+<h3>Tags</h3>
+
+<div class="stackly-tags">
+
+<span>Cheese</span>
+<span class="active">Cocktail</span>
+<span>Drink</span>
+<span>Pizza</span>
+<span>Non Veg</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<script>
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+
+});
+
+},{threshold:0.2});
+
+document.querySelectorAll(".stackly-scroll").forEach(el=>{
+observer.observe(el);
+});
+
+
+</script>
+
+<!-- ================= IMAGE SCROLL ================= -->
+<section class="image-scroll-section">
+  <div class="image-scroll-wrapper">
+
+    <!-- 7 Images -->
+    <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+    <!-- Duplicate for infinite loop -->
+   <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const wrapper = document.querySelector(".image-scroll-wrapper");
+
+  let position = 0;
+  const speed = 0.6; // scroll speed
+
+  function autoScroll() {
+
+    position += speed;
+
+    if (position >= wrapper.scrollWidth / 2) {
+      position = 0;
+    }
+
+    wrapper.style.transform = "translateX(-" + position + "px)";
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  autoScroll();
+
+});
+</script>
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+
+<!-- CORNER IMAGES -->
+<img src="images/GREEN.webp" class="footer-left" alt="">
+
+
+
+<!-- ORANGE CONTACT BOX -->
+<div class="footer-contact-box">
+
+<div>
+<h4>Address</h4>
+<p>4648 Rocky Road Philadelphia</p>
+</div>
+
+<div>
+<h4>Send Email</h4>
+<p>info@example.com</p>
+</div>
+
+<div>
+<h4>Call Emergency</h4>
+<p>+88 0123 654 99</p>
+</div>
+
+</div>
+
+
+<!-- FOOTER CONTENT -->
+<div class="footer-content">
+
+<!-- COLUMN 1 -->
+<div class="footer-col">
+<h3 class="logo-title">
+  <a href="index.html">
+    <img src="images/logo10 (2).png" alt="Stackly Logo">
+  </a>
+</h3>
+
+<p>
+Phasellus ultricies aliquam volutpat ullamcorper laoreet neque.
+Curabitur lacinia mollis.
+</p>
+
+<!-- SOCIAL ICONS -->
+<div class="footer-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+</div>
+
+
+<!-- COLUMN 2 -->
+<div class="footer-col">
+
+<h4>Quick Links</h4>
+
+<ul>
+<li><a href="404.html">About Us</a></li>
+<li><a href="404.html">Our Gallery</a></li>
+<li><a href="404.html">Our Blogs</a></li>
+<li><a href="404.html">FAQ's</a></li>
+<li><a href="404.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+<div class="footer-col">
+
+<h4>Our Menu</h4>
+
+<ul>
+<ul>
+<li><a href="404.html">Burger King</a></li>
+<li><a href="404.html">Pizza King</a></li>
+<li><a href="404.html">Fresh Food</a></li>
+<li><a href="404.html">Vegetable</a></li>
+<li><a href="404.html">Desserts</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 4 -->
+<div class="footer-col">
+
+<h4>Newsletter</h4>
+
+<p>Subscribe to get latest updates</p>
+<div class="subscribe-box">
+
+<input type="email" id="emailInput" placeholder="Your email address">
+
+<button id="subscribeBtn" type="button">
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</div>
+
+<p id="emailError" style="color:red;font-size:14px;margin-top:6px;"></p>
+
+</div>
+</div>
+
+<!-- FOOTER BOTTOM -->
+<div class="footer-bottom">
+
+<p>© All Copyright 2024 by Stackly</p>
+
+<div>
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Terms & Condition
+</span>
+
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Privacy Policy
+</span>
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+  
+  document.getElementById("subscribeBtn").addEventListener("click", function () {
+
+let email = document.getElementById("emailInput").value.trim();
+let error = document.getElementById("emailError");
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(email === ""){
+error.innerText = "Please enter your email address";
+return;
+}
+
+if(!emailPattern.test(email)){
+error.innerText = "Please enter a valid email address";
+return;
+}
+
+/* clear error */
+error.innerText = "";
+
+/* redirect */
+window.location.href = "404.html";
+
+});
+</script>
+
+
+
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

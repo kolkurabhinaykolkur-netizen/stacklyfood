@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- TOP RED BAR -->
+<div class="top-bar">
+  <div class="top-container">
+    <div class="time">09:00 am - 06:00 pm</div>
+    <div class="social">
+      <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+      <a href="404.html"><i class="fab fa-twitter"></i></a>
+      <a href="404.html"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+
+    <div class="logo-area">
+  <a href="index.html">
+    <img src="images/logo2.webp" alt="logo">
+  </a>
+</div>
+
+    <!-- NAV CENTER -->
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home <i class="fas fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-right">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="404.html" class="order-btn">Order Now</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="mobile-top">
+<img src="images/logo2.webp">
+<i class="fas fa-times" onclick="toggleMenu()"></i>
+</div>
+
+<ul>
+
+<li class="dropdown">
+
+<span onclick="toggleDropdown()">Home <i class="fas fa-chevron-down"></i></span>
+
+<ul class="dropdown-menu" id="homeDropdown">
+
+<li><a href="home2.html">Home 2</a></li>
+</ul>
+
+</li>
+
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+
+</ul>
+
+<div class="mobile-contact">
+<p>Main Street, India</p>
+<p>info@stackly.com</p>
+<p>+91 9876543210</p>
+</div>
+
+<a href="login.html" class="login-btn mobile-btn">Login</a>
+<a href="404.html" class="order-btn mobile-btn">Order Now</a>
+
+<div class="mobile-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- ===== ABOUT HERO SECTION ===== -->
+<section class="about-hero-section">
+
+<div class="about-hero-overlay"></div>
+
+<div class="about-hero-content">
+<h1>Services</h1>
+
+<p class="about-breadcrumb">
+Home / <span>Services</span>
+</p>
+
+<p class="about-description">
+Enjoy your favorite meals delivered hot and fresh to your doorstep. 
+Stackly ensures quick and reliable delivery so you can satisfy 
+your cravings anytime.
+</p>
+</div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const hero = document.querySelector(".about-hero-content");
+
+hero.style.opacity = "0";
+
+setTimeout(()=>{
+hero.style.opacity = "1";
+hero.style.transition = "1s";
+},200);
+
+}); </script>
+
+
+
+
+
+
+
+<section class="stackly-services">
+
+<div class="services-container">
+
+<div class="service-card">
+
+<img src="images/hb (1).webp">
+
+<h3>Dining Guides</h3>
+<p>
+Stackly provides helpful dining guides to explore the best
+restaurants and dishes near you.
+</p>
+</div>
+
+<div class="service-card active">
+
+<img src="images/hb (2).webp">
+
+<h3>100% Fresh Food</h3>
+<p>
+Our meals are prepared with fresh ingredients to deliver
+delicious taste and healthy food.
+</p>
+</div>
+
+<div class="service-card">
+
+<img src="images/hb (3).webp">
+
+<h3>Special Offers</h3>
+<p>
+Enjoy exciting discounts and special offers available
+every week at Stackly.
+</p>
+</div>
+
+<div class="service-card">
+
+<img src="images/hb (4).webp">
+
+<h3>Restaurant Reviews</h3>
+<p>
+Find honest restaurant reviews and recommendations
+to help you choose the best food.
+</p>
+</div>
+
+<div class="service-card">
+
+<img src="images/hb (5).webp">
+
+<h3>Food Testing Events</h3>
+<p>
+Stackly hosts exciting food tasting events for
+customers to explore new flavours.
+</p>
+</div>
+
+<div class="service-card">
+
+<img src="images/hb (6).webp">
+
+<h3>Online Ordering</h3>
+<p>
+Order your favourite meals easily using our
+online ordering system.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<script>
+
+const cards = document.querySelectorAll(".service-card");
+
+cards.forEach(card => {
+
+card.addEventListener("mouseenter", () => {
+
+const icon = card.querySelector(".service-icon img");
+
+icon.style.transition = "transform 0.6s";
+icon.style.transform = "rotate(360deg)";
+
+});
+
+card.addEventListener("mouseleave", () => {
+
+const icon = card.querySelector(".service-icon img");
+
+setTimeout(() => {
+icon.style.transform = "rotate(0deg)";
+}, 200);
+
+});
+
+});
+
+</script>
+
+
+
+
+
+<section class="stackly-service-page">
+
+<button class="mobile-sidebar-btn">☰ Categories</button>
+
+<div class="service-container">
+
+
+<!-- SIDEBAR -->
+
+<div class="service-sidebar">
+
+<div class="sidebar-box">
+<h3>Search</h3>
+
+<div class="search-box">
+<input type="text" placeholder="Search here">
+<button>🔍</button>
+</div>
+
+</div>
+
+
+<div class="sidebar-box">
+
+<h3>Categories</h3>
+
+<ul class="category-list">
+<li>Breakfast <span>(08)</span></li>
+<li>Restaurant <span>(11)</span></li>
+<li class="active">Dinner <span>(12)</span></li>
+<li>Fast Food <span>(18)</span></li>
+<li>Launch <span>(07)</span></li>
+</ul>
+
+</div>
+
+
+<div class="sidebar-box">
+
+<h3>Recent Post</h3>
+
+<div class="post-item">
+<img src="images/P1 (2).webp">
+<div>
+<span>1 Dec, 2024</span>
+<p>Avoid Health Risk Food</p>
+</div>
+</div>
+
+<div class="post-item">
+<img src="images/P1 (3).webp">
+<div>
+<span>8 Dec, 2024</span>
+<p>Tacking The Condition</p>
+</div>
+</div>
+
+<div class="post-item">
+<img src="images/P1 (4).webp">
+<div>
+<span>28 Dec, 2024</span>
+<p>Food Solution</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="sidebar-box">
+
+<h3>Tags</h3>
+
+<div class="tags">
+<span>Cheese</span>
+<span class="active">Cocktail</span>
+<span>Drink</span>
+<span>Pizza</span>
+<span>Non Veg</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RIGHT CONTENT -->
+
+<div class="service-content">
+
+<img class="top-img" src="images/kp (1).webp">
+
+<h2>100% Fresh Food</h2>
+
+<p>
+Stackly delivers fresh and high-quality meals prepared with
+the best ingredients. Our chefs focus on flavour and nutrition.
+</p>
+
+<p>
+Every dish is cooked with care and delivered fresh to your table.
+</p>
+
+
+<h3>The Best Services Tailored For You</h3>
+
+<div class="content-grid">
+
+<img src="images/kp (2).webp">
+
+<ul>
+<li>Overview of Services</li>
+<li>Quality and Standards</li>
+<li>Customization</li>
+<li>Professional Staff</li>
+<li>Pricing and Value</li>
+</ul>
+
+</div>
+
+<p>
+Stackly combines excellent service with premium ingredients
+to create the perfect dining experience.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<script>
+
+// MOBILE SIDEBAR TOGGLE
+
+const btn = document.querySelector(".mobile-sidebar-btn");
+const sidebar = document.querySelector(".service-sidebar");
+
+btn.addEventListener("click", function(){
+
+sidebar.classList.toggle("active");
+
+});
+</script>
+
+
+
+<section class="stackly-faq-section">
+
+<div class="stackly-faq-container">
+
+<!-- LEFT IMAGE -->
+<div class="stackly-faq-image">
+<img src="images/bigburger.webp" alt="faq image">
+</div>
+
+<!-- RIGHT FAQ -->
+<div class="stackly-faq-content">
+
+<h5 class="stackly-faq-small">FAQ</h5>
+<h2 class="stackly-faq-title">Frequently Ask Question</h2>
+
+
+<div class="stackly-faq-item">
+
+<div class="stackly-faq-question">
+What Types Of Cuisines Do You Cover On This Blog?
+<span class="stackly-icon">+</span>
+</div>
+
+<div class="stackly-faq-answer">
+We cover a wide variety of cuisines including Italian, Indian, Chinese and more.
+</div>
+
+</div>
+
+
+<div class="stackly-faq-item">
+
+<div class="stackly-faq-question">
+How Do You Choose The Restaurants You Review?
+<span class="stackly-icon">+</span>
+</div>
+
+<div class="stackly-faq-answer">
+We choose restaurants based on food quality, reviews and customer experience.
+</div>
+
+</div>
+
+
+<div class="stackly-faq-item active">
+
+<div class="stackly-faq-question">
+Do You Get Paid To Review Restaurants?
+<span class="stackly-icon">−</span>
+</div>
+
+<div class="stackly-faq-answer">
+Yes, restaurants that have recently opened often generate buzz and reviewing them provides timely content.
+</div>
+
+</div>
+
+
+<div class="stackly-faq-item">
+
+<div class="stackly-faq-question">
+How Can I Find The Best Restaurants In My Area?
+<span class="stackly-icon">+</span>
+</div>
+
+<div class="stackly-faq-answer">
+You can browse our curated restaurant lists and location filters.
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+<script>
+
+    const faqItems = document.querySelectorAll(".stackly-faq-item");
+
+faqItems.forEach(item => {
+
+item.addEventListener("click", () => {
+
+faqItems.forEach(el => {
+if(el !== item){
+el.classList.remove("active");
+el.querySelector(".stackly-icon").textContent = "+";
+}
+});
+
+item.classList.toggle("active");
+
+const icon = item.querySelector(".stackly-icon");
+
+if(item.classList.contains("active")){
+icon.textContent = "−";
+}else{
+icon.textContent = "+";
+}
+
+});
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="stackly-contact-hero">
+
+<div class="stackly-contact-container">
+
+<!-- LEFT CONTENT -->
+<div class="stackly-contact-left">
+
+<h1>GET IN TOUCH</h1>
+
+<p>
+Consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+</p>
+
+<div class="stackly-contact-info">
+
+<div>
+<h4>Contact</h4>
+<span>+012 3455 862 69</span>
+</div>
+
+<div>
+<h4>Email</h4>
+<span>companyinfo@gmail.com</span>
+</div>
+
+<div>
+<h4>Address</h4>
+<span>Jackpark, Ghana</span>
+</div>
+
+<div>
+<h4>Follow</h4>
+
+<div class="stackly-socials">
+<span>F</span>
+<span>T</span>
+<span>I</span>
+<span>Y</span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- RIGHT FORM -->
+<div class="stackly-reservation-box">
+
+<h2>Create An <span>Reservation</span></h2>
+
+<form id="stacklyReservationForm">
+
+<div class="stackly-form-grid">
+
+<input type="date" id="date">
+<input type="time" id="time">
+
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="number" id="guest" placeholder="Guest">
+
+</div>
+
+<textarea id="message" placeholder="Write your message here..."></textarea>
+
+<button type="submit" class="stackly-book-btn">
+BOOK A TABLE →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+    document.getElementById("stacklyReservationForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let date = document.getElementById("date").value;
+let time = document.getElementById("time").value;
+let phone = document.getElementById("phone").value;
+let guest = document.getElementById("guest").value;
+let message = document.getElementById("message").value;
+
+if(date==="" || time==="" || phone==="" || guest==="" || message===""){
+
+alert("Please fill all the fields");
+
+}else{
+
+window.location.href="404.html";
+
+}
+
+});
+</script>
+
+
+<!-- ================= IMAGE SCROLL ================= -->
+<section class="image-scroll-section">
+  <div class="image-scroll-wrapper">
+
+    <!-- 7 Images -->
+    <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+    <!-- Duplicate for infinite loop -->
+   <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const wrapper = document.querySelector(".image-scroll-wrapper");
+
+  let position = 0;
+  const speed = 0.6; // scroll speed
+
+  function autoScroll() {
+
+    position += speed;
+
+    if (position >= wrapper.scrollWidth / 2) {
+      position = 0;
+    }
+
+    wrapper.style.transform = "translateX(-" + position + "px)";
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  autoScroll();
+
+});
+</script>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+
+<!-- CORNER IMAGES -->
+<img src="images/GREEN.webp" class="footer-left" alt="">
+
+
+
+<!-- ORANGE CONTACT BOX -->
+<div class="footer-contact-box">
+
+<div>
+<h4>Address</h4>
+<p>4648 Rocky Road Philadelphia</p>
+</div>
+
+<div>
+<h4>Send Email</h4>
+<p>info@example.com</p>
+</div>
+
+<div>
+<h4>Call Emergency</h4>
+<p>+88 0123 654 99</p>
+</div>
+
+</div>
+
+
+<!-- FOOTER CONTENT -->
+<div class="footer-content">
+
+<!-- COLUMN 1 -->
+<div class="footer-col">
+
+<h3 class="logo-title">
+  <a href="index.html">
+    <img src="images/logo10 (2).png" alt="Stackly Logo">
+  </a>
+</h3>
+
+<p>
+Phasellus ultricies aliquam volutpat ullamcorper laoreet neque.
+Curabitur lacinia mollis.
+</p>
+
+<!-- SOCIAL ICONS -->
+<div class="footer-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+</div>
+
+
+<!-- COLUMN 2 -->
+<div class="footer-col">
+
+<h4>Quick Links</h4>
+
+<ul>
+<li><a href="404.html">About Us</a></li>
+<li><a href="404.html">Our Gallery</a></li>
+<li><a href="404.html">Our Blogs</a></li>
+<li><a href="404.html">FAQ's</a></li>
+<li><a href="404.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+<div class="footer-col">
+
+<h4>Our Menu</h4>
+
+<ul>
+<ul>
+<li><a href="404.html">Burger King</a></li>
+<li><a href="404.html">Pizza King</a></li>
+<li><a href="404.html">Fresh Food</a></li>
+<li><a href="404.html">Vegetable</a></li>
+<li><a href="404.html">Desserts</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 4 -->
+<div class="footer-col">
+
+<h4>Newsletter</h4>
+
+<p>Subscribe to get latest updates</p>
+<div class="subscribe-box">
+
+<input type="email" id="emailInput" placeholder="Your email address">
+
+<button id="subscribeBtn" type="button">
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</div>
+
+<p id="emailError" style="color:red;font-size:14px;margin-top:6px;"></p>
+
+</div>
+</div>
+
+<!-- FOOTER BOTTOM -->
+<div class="footer-bottom">
+
+<p>© All Copyright 2024 by Stackly</p>
+
+<div>
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Terms & Condition
+</span>
+
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Privacy Policy
+</span>
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+  
+  document.getElementById("subscribeBtn").addEventListener("click", function () {
+
+let email = document.getElementById("emailInput").value.trim();
+let error = document.getElementById("emailError");
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(email === ""){
+error.innerText = "Please enter your email address";
+return;
+}
+
+if(!emailPattern.test(email)){
+error.innerText = "Please enter a valid email address";
+return;
+}
+
+/* clear error */
+error.innerText = "";
+
+/* redirect */
+window.location.href = "404.html";
+
+});
+</script>
+
+
+
+
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

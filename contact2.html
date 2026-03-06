@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restaurant</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="app.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    
+
+<header class="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+<div class="logo">
+<img src="images/HHHH.webp">
+</div>
+
+<!-- MENU -->
+<nav class="nav-menu">
+
+<div class="close-menu">✕</div>
+
+<ul>
+
+<li class="dropdown">
+
+<a href="home2.html">Home</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="index.html">Home 1</a></li>
+</ul>
+
+</li>
+
+<li><a href="about2.html">About</a></li>
+<li><a href="services2.html">Services</a></li>
+<li><a href="blogs2.html">Blogs</a></li>
+<li><a href="contact2.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<a href="404page.html" class="book-btn">Book</a>
+
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+</header>
+
+
+
+
+
+<section class="stackly-about-hero">
+
+<div class="about-hero-overlay"></div>
+
+<div class="about-hero-content">
+
+<h1>CONTACT</h1>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="stackly-contact">
+
+<div class="contact-container">
+
+<!-- LEFT FORM -->
+
+<div class="contact-form-area">
+
+<span class="contact-small">Write to us</span>
+
+<h2 class="contact-title">CONTACT US</h2>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Name">
+
+<input type="email" id="email" placeholder="E-mail">
+
+<textarea id="message" placeholder="Message"></textarea>
+
+<p id="errorMsg"></p>
+
+<button type="submit">SEND</button>
+
+</form>
+
+</div>
+
+
+
+<!-- RIGHT CONTACT INFO -->
+
+<div class="contact-info">
+
+<div class="info-box">
+
+<h3>STACKLY CENTRAL</h3>
+
+<p>21 Gourmet Street</p>
+<p>+91 98765 43210</p>
+<p>reservations@stackly.com</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h3>STACKLY DOWNTOWN</h3>
+
+<p>45 Fine Dining Avenue</p>
+<p>+91 91234 56789</p>
+<p>contact@stackly.com</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h3>STACKLY LOUNGE</h3>
+
+<p>88 Culinary Road</p>
+<p>+91 99887 66554</p>
+<p>events@stackly.com</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h3>STACKLY RESERVE</h3>
+
+<p>12 Royal Plaza</p>
+<p>+91 90011 22334</p>
+<p>vip@stackly.com</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-map">
+
+<h2 class="map-title">STACKLY HYDERABAD LOCATION</h2>
+
+<div class="map-container">
+
+<iframe 
+src="https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+frameborder="0"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+
+
+<footer class="stackly-footer">
+
+<!-- SUBSCRIBE LAYER -->
+
+<div class="footer-subscribe">
+
+<h3>Subscribe To Our Newsletter</h3>
+
+<p>Get updates about new dishes and special offers at Stackly Restaurant.</p>
+<div class="subscribe-form">
+
+<input type="email" id="emailInput" placeholder="Enter your email">
+
+<button onclick="validateEmail()">SUBSCRIBE</button>
+
+<p id="emailError"></p>
+
+</div>
+
+
+<!-- MAIN FOOTER -->
+
+<div class="footer-container">
+
+<!-- LOGO -->
+<div class="footer-logo">
+
+<h2>
+<a href="index.html">
+<img src="images/HHHH.webp" alt="Stackly Logo">
+</a>
+</h2>
+
+
+
+<p>
+Experience fine dining and unforgettable flavors at Stackly Restaurant.
+Where passion meets perfection in every dish.
+</p>
+
+</div>
+
+
+<!-- LINKS -->
+
+<div class="footer-links">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="home2.html">Home</a></li>
+<li><a href="about2.html">About</a></li>
+<li><a href="404page.html">Menu</a></li>
+<li><a href="404page.html">Reservations</a></li>
+<li><a href="contact2.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="footer-contact">
+
+<h4>Contact</h4>
+
+<p>Stackly Restaurant</p>
+<p>Food Street, City Center</p>
+<p>+91 9876543210</p>
+<p>info@stackly.com</p>
+
+</div>
+
+
+<!-- SOCIAL -->
+
+<div class="footer-social">
+
+<h4>Follow Us</h4>
+
+<div class="social-icons">
+
+<a href="404page.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404page.html"><i class="fab fa-instagram"></i></a>
+<a href="404page.html"><i class="fab fa-twitter"></i></a>
+<a href="404page.html"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- COPYRIGHT -->
+
+<div class="footer-bottom">
+
+<p>© 2026 Stackly Restaurant. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+<button id="stacklyScrollTop" class="stackly-scroll-top">
+↑
+</button>
+<script src="script.js"></script>
+
+</body>
+</html>

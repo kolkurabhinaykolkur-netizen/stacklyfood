@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- TOP RED BAR -->
+<div class="top-bar">
+  <div class="top-container">
+    <div class="time">09:00 am - 06:00 pm</div>
+    <div class="social">
+      <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+      <a href="404.html"><i class="fab fa-twitter"></i></a>
+      <a href="404.html"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+
+    <div class="logo-area">
+  <a href="index.html">
+    <img src="images/logo2.webp" alt="logo">
+  </a>
+</div>
+    <!-- NAV CENTER -->
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home <i class="fas fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-right">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="404.html" class="order-btn">Order Now</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="mobile-top">
+<img src="images/logo2.webp">
+<i class="fas fa-times" onclick="toggleMenu()"></i>
+</div>
+
+<ul>
+
+<li class="dropdown">
+
+<span onclick="toggleDropdown()">Home <i class="fas fa-chevron-down"></i></span>
+
+<ul class="dropdown-menu" id="homeDropdown">
+
+<li><a href="home2.html">Home 2</a></li>
+</ul>
+
+</li>
+
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+
+</ul>
+
+<div class="mobile-contact">
+<p>Main Street, India</p>
+<p>info@stackly.com</p>
+<p>+91 9876543210</p>
+</div>
+
+<a href="login.html" class="login-btn mobile-btn">Login</a>
+<a href="404.html" class="order-btn mobile-btn">Order Now</a>
+
+<div class="mobile-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+</div>
+
+</div>
+
+
+
+
+
+<!-- ===== ABOUT HERO SECTION ===== -->
+<section class="about-hero-section">
+
+<div class="about-hero-overlay"></div>
+
+<div class="about-hero-content">
+<h1>Account</h1>
+
+<p class="about-breadcrumb">
+Home / <span>My Account</span>
+</p>
+
+<p class="about-description">
+Enjoy your favorite meals delivered hot and fresh to your doorstep. 
+Stackly ensures quick and reliable delivery so you can satisfy 
+your cravings anytime.
+</p>
+</div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const hero = document.querySelector(".about-hero-content");
+
+hero.style.opacity = "0";
+
+setTimeout(()=>{
+hero.style.opacity = "1";
+hero.style.transition = "1s";
+},200);
+
+}); </script>
+
+
+
+
+
+<section class="stackly-auth">
+
+<div class="stackly-auth-wrapper">
+
+<!-- LEFT LOGIN / REGISTER -->
+<div class="stackly-auth-box">
+
+<img src="images/logo2.webp"class="stackly-logo">
+
+<h2 id="authTitle">Welcome Back</h2>
+<p>Please Enter Your Details</p>
+
+<form id="authForm">
+
+<input type="text" id="name" placeholder="Full Name" class="register-field">
+
+<input type="email" id="email" placeholder="Email">
+
+<div class="password-box">
+<input type="password" id="password" placeholder="Password">
+<span class="eye" onclick="togglePassword('password',this)">👁</span>
+</div>
+
+<div class="password-box register-field">
+<input type="password" id="confirmPassword" placeholder="Confirm Password">
+<span class="eye" onclick="togglePassword('confirmPassword',this)">👁</span>
+</div>
+
+<div class="options">
+
+<label>
+<input type="checkbox"> Remember For 30 Days
+</label>
+
+<a href="404.html">Forgot Password?</a>
+
+</div>
+
+<button type="submit" id="authBtn">Log In</button>
+
+<p class="switch">
+
+<span id="switchText">Don't Have An Account?</span>
+<a href="#" id="toggleAuth">Sign Up</a>
+
+</p>
+
+<p id="error"></p>
+
+</form>
+
+</div>
+
+
+<!-- RIGHT IMAGE -->
+<div class="stackly-auth-image">
+
+<img src="images/girlimeg.webp">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+
+    let toggle=document.getElementById("toggleAuth");
+let title=document.getElementById("authTitle");
+let btn=document.getElementById("authBtn");
+let switchText=document.getElementById("switchText");
+let registerFields=document.querySelectorAll(".register-field");
+
+let register=false;
+
+toggle.onclick=function(e){
+
+e.preventDefault();
+
+register=!register;
+
+if(register){
+
+title.innerText="Create Account";
+btn.innerText="Sign Up";
+
+switchText.innerText="Already Have An Account?";
+toggle.innerText="Sign In";
+
+registerFields.forEach(f=>f.style.display="block");
+
+}else{
+
+title.innerText="Welcome Back";
+btn.innerText="Log In";
+
+switchText.innerText="Don't Have An Account?";
+toggle.innerText="Sign Up";
+
+registerFields.forEach(f=>f.style.display="none");
+
+}
+
+}
+
+
+/* SHOW / HIDE PASSWORD */
+
+function togglePassword(id,icon){
+
+let input=document.getElementById(id);
+
+if(input.type==="password"){
+
+input.type="text";
+icon.innerText="🙈";
+
+}else{
+
+input.type="password";
+icon.innerText="👁";
+
+}
+
+}
+
+
+/* FORM VALIDATION */
+
+document.getElementById("authForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let email=document.getElementById("email").value.trim();
+let password=document.getElementById("password").value.trim();
+let name=document.getElementById("name").value.trim();
+let confirm=document.getElementById("confirmPassword").value.trim();
+
+let error=document.getElementById("error");
+
+if(register){
+
+if(name=="" || email=="" || password=="" || confirm==""){
+
+error.innerText="Please fill all fields";
+return;
+
+}
+
+if(password!==confirm){
+
+error.innerText="Passwords do not match";
+return;
+
+}
+
+}else{
+
+if(email=="" || password==""){
+
+error.innerText="Please fill all fields";
+return;
+
+}
+
+}
+
+window.location.href="404.html";
+
+});
+</script>
+
+<!-- ================= IMAGE SCROLL ================= -->
+<section class="image-scroll-section">
+  <div class="image-scroll-wrapper">
+
+    <!-- 7 Images -->
+    <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+    <!-- Duplicate for infinite loop -->
+   <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const wrapper = document.querySelector(".image-scroll-wrapper");
+
+  let position = 0;
+  const speed = 0.6; // scroll speed
+
+  function autoScroll() {
+
+    position += speed;
+
+    if (position >= wrapper.scrollWidth / 2) {
+      position = 0;
+    }
+
+    wrapper.style.transform = "translateX(-" + position + "px)";
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  autoScroll();
+
+});
+</script>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+
+<!-- CORNER IMAGES -->
+<img src="images/GREEN.webp" class="footer-left" alt="">
+
+
+
+<!-- ORANGE CONTACT BOX -->
+<div class="footer-contact-box">
+
+<div>
+<h4>Address</h4>
+<p>4648 Rocky Road Philadelphia</p>
+</div>
+
+<div>
+<h4>Send Email</h4>
+<p>info@example.com</p>
+</div>
+
+<div>
+<h4>Call Emergency</h4>
+<p>+88 0123 654 99</p>
+</div>
+
+</div>
+
+
+<!-- FOOTER CONTENT -->
+<div class="footer-content">
+
+<!-- COLUMN 1 -->
+<div class="footer-col">
+
+<h3 class="logo-title">
+  <a href="index.html">
+    <img src="images/logo10 (2).png"alt="Stackly Logo">
+  </a>
+</h3>
+
+<p>
+Phasellus ultricies aliquam volutpat ullamcorper laoreet neque.
+Curabitur lacinia mollis.
+</p>
+
+<!-- SOCIAL ICONS -->
+<div class="footer-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+</div>
+
+
+<!-- COLUMN 2 -->
+<div class="footer-col">
+
+<h4>Quick Links</h4>
+
+<ul>
+<li><a href="404.html">About Us</a></li>
+<li><a href="404.html">Our Gallery</a></li>
+<li><a href="404.html">Our Blogs</a></li>
+<li><a href="404.html">FAQ's</a></li>
+<li><a href="404.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+<div class="footer-col">
+
+<h4>Our Menu</h4>
+
+<ul>
+<ul>
+<li><a href="404.html">Burger King</a></li>
+<li><a href="404.html">Pizza King</a></li>
+<li><a href="404.html">Fresh Food</a></li>
+<li><a href="404.html">Vegetable</a></li>
+<li><a href="404.html">Desserts</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 4 -->
+<div class="footer-col">
+
+<h4>Newsletter</h4>
+
+<p>Subscribe to get latest updates</p>
+<div class="subscribe-box">
+
+<input type="email" id="emailInput" placeholder="Your email address">
+
+<button id="subscribeBtn" type="button">
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</div>
+
+<p id="emailError" style="color:red;font-size:14px;margin-top:6px;"></p>
+
+</div>
+</div>
+
+<!-- FOOTER BOTTOM -->
+<div class="footer-bottom">
+
+<p>© All Copyright 2024 by Stackly</p>
+
+<div>
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Terms & Condition
+</span>
+
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Privacy Policy
+</span>
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+  
+  document.getElementById("subscribeBtn").addEventListener("click", function () {
+
+let email = document.getElementById("emailInput").value.trim();
+let error = document.getElementById("emailError");
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(email === ""){
+error.innerText = "Please enter your email address";
+return;
+}
+
+if(!emailPattern.test(email)){
+error.innerText = "Please enter a valid email address";
+return;
+}
+
+/* clear error */
+error.innerText = "";
+
+/* redirect */
+window.location.href = "404.html";
+
+});
+</script>
+
+
+
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

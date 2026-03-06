@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Restaurant - Page Not Found</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#07112f,#150132);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:600px;
+padding:40px;
+}
+
+/* 404 TEXT */
+
+.error{
+font-size:120px;
+font-weight:bold;
+letter-spacing:5px;
+color:#ff2c2c;
+animation:float 3s ease-in-out infinite;
+}
+
+/* MESSAGE */
+
+h2{
+margin:10px 0 15px;
+font-size:28px;
+}
+
+p{
+color:#ddd;
+margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+background:#ff2c2c;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:#ff4444;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* BACKGROUND ANIMATION */
+
+body::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:rgba(255,44,44,0.15);
+border-radius:50%;
+top:-200px;
+left:-200px;
+animation:move 10s linear infinite;
+}
+
+body::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(255,44,44,0.15);
+border-radius:50%;
+bottom:-200px;
+right:-200px;
+animation:move 12s linear infinite reverse;
+}
+
+@keyframes move{
+
+0%{
+transform:rotate(0deg) translate(0,0);
+}
+
+50%{
+transform:rotate(180deg) translate(50px,50px);
+}
+
+100%{
+transform:rotate(360deg) translate(0,0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.error{
+font-size:90px;
+}
+
+h2{
+font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="error">404</div>
+
+<h2>Oops! Page Not Found</h2>
+
+<p>
+Looks like the page you're looking for doesn't exist.
+Let's get you back to Stackly Restaurant.
+</p>
+
+<a href="index.html" class="btn">Go Back Home</a>
+
+</div>
+
+</body>
+</html>

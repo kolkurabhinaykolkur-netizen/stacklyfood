@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- TOP RED BAR -->
+<div class="top-bar">
+  <div class="top-container">
+    <div class="time">09:00 am - 06:00 pm</div>
+    <div class="social">
+      <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+      <a href="404.html"><i class="fab fa-twitter"></i></a>
+      <a href="404.html"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+
+    <!-- LOGO LEFT WHITE -->
+    <div class="logo-area">
+  <a href="index.html">
+    <img src="images/logo2.webp" alt="logo">
+  </a>
+</div>
+
+    <!-- NAV CENTER -->
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html">Home <i class="fas fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-right">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="404.html" class="order-btn">Order Now</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="mobile-top">
+<img src="images/logo2.webp">
+<i class="fas fa-times" onclick="toggleMenu()"></i>
+</div>
+
+<ul>
+
+<li class="dropdown">
+
+<span onclick="toggleDropdown()">Home <i class="fas fa-chevron-down"></i></span>
+
+<ul class="dropdown-menu" id="homeDropdown">
+
+<li><a href="home2.html">Home 2</a></li>
+</ul>
+
+</li>
+
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+
+</ul>
+
+<div class="mobile-contact">
+<p>Main Street, India</p>
+<p>info@stackly.com</p>
+<p>+91 9876543210</p>
+</div>
+
+<a href="login.html" class="login-btn mobile-btn">Login</a>
+<a href="404.html" class="order-btn mobile-btn">Order Now</a>
+
+<div class="mobile-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+</div>
+
+</div>
+
+
+
+
+<!-- ===== ABOUT HERO SECTION ===== -->
+<section class="about-hero-section">
+
+<div class="about-hero-overlay"></div>
+
+<div class="about-hero-content">
+<h1>ABOUT US</h1>
+
+<p class="about-breadcrumb">
+Home / <span>About Us</span>
+</p>
+
+<p class="about-description">
+We serve fresh and delicious meals made with passion
+and the finest ingredients for every customer.
+</p>
+</div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const hero = document.querySelector(".about-hero-content");
+
+hero.style.opacity = "0";
+
+setTimeout(()=>{
+hero.style.opacity = "1";
+hero.style.transition = "1s";
+},200);
+
+}); </script>
+
+
+
+
+
+<section class="promo-section">
+
+  <div class="promo-grid">
+
+    <!-- CARD 1 -->
+    <div class="promo-card">
+      <div class="promo-content">
+        <h5>ON THIS WEEK</h5>
+        <h2>SPICY FRIED CHICKEN</h2>
+        <p>Limited Time Offer</p>
+        <a href="404.html" class="promo-btn">ORDER NOW →</a>
+      </div>
+
+      <div class="promo-image">
+        <img src="images/m (1).webp" alt="Spicy Fried Chicken">
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="promo-card">
+      <div class="promo-content">
+        <h5>WELCOME STACKLY</h5>
+        <h2>TODAY SPECIAL FOOD</h2>
+        <p>Limited Time Offer</p>
+        <a href="404.html" class="promo-btn orange">ORDER NOW →</a>
+      </div>
+
+      <div class="promo-image">
+        <img src="images/m (2).webp" alt="Today Special Food">
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="promo-card">
+      <div class="promo-content">
+        <h5>ON THIS WEEK</h5>
+        <h2>SPECIAL CHICKEN ROLL</h2>
+        <p>Limited Time Offer</p>
+        <a href="404.html" class="promo-btn">ORDER NOW →</a>
+      </div>
+
+      <div class="promo-image">
+        <img src="images/m (3).webp" alt="Special Chicken Roll">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about-section">
+
+  <div class="about-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="circle-box">
+      <img src="images/cicrle (1).webp" alt="Food">
+    </div>
+
+    <!-- CENTER CONTENT -->
+    <div class="about-content">
+      <span class="about-tag">ABOUT US</span>
+      <h2>Variety Of Flavours From American Cuisine</h2>
+      <p>
+        It is a long established fact that a reader will be distracted 
+        by readable content of a page.
+      </p>
+      <a href="404.html" class="order-btn">ORDER NOW</a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="circle-box">
+      <img src="images/cicrle (2).webp" alt="Food">
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="pizza-offer">
+
+<!-- LEFT DECORATION -->
+<img src="images/GREEN.webp" class="pizza-left">
+
+<!-- RIGHT DECORATION -->
+<img src="images/f1 (3).webp" class="pizza-right">
+
+
+<div class="pizza-container">
+
+<div class="pizza-text">
+
+<span class="pizza-tag">WELCOME STACKLY</span>
+
+<h1>TODAY SPECIAL FOOD</h1>
+
+<p>Limits Time Offer</p>
+
+<button class="pizza-btn" onclick="window.location.href='404.html'">
+ORDER NOW →
+</button>
+
+</div>
+
+
+<div class="pizza-image">
+
+<img src="images/pizza.webp">
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded",function(){
+
+const pizza = document.querySelector(".pizza-offer");
+
+function reveal(){
+
+const pos = pizza.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(pos < screen - 100){
+
+pizza.style.opacity = "1";
+pizza.style.transform = "translateY(0)";
+
+}
+
+}
+
+pizza.style.opacity = "0";
+pizza.style.transform = "translateY(80px)";
+pizza.style.transition = "0.8s";
+
+window.addEventListener("scroll",reveal);
+
+});
+</script>
+
+
+
+
+
+
+<section class="chef-section">
+
+  <!-- 🔥 LEFT CORNER DECORATION (You Add Image) -->
+  <img src="images/f1 (3).webp" class="left-decor" alt="">
+
+  <div class="chef-container">
+
+    <div class="section-header">
+      <span>OUR CHEF</span>
+      <h2>Meet Our Expert Chefe</h2>
+    </div>
+
+    <div class="chef-grid">
+
+      <div class="chef-card">
+        <div class="chef-image">
+          <img src="images/chef` (1).webp" alt="">
+          <div class="share-icon">➜</div>
+        </div>
+        <div class="chef-info">
+          <h4>Ralph Edwards</h4>
+          <p>Chef Lead</p>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <div class="chef-image orange-border">
+          <img src="images/chef` (2).webp" alt="">
+          <div class="share-icon">➜</div>
+        </div>
+        <div class="chef-info">
+          <h4>Leslie Alexander</h4>
+          <p>Chef Assistant</p>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <div class="chef-image red-border">
+          <img src="images/chef` (3).webp" alt="">
+          <div class="share-icon">➜</div>
+        </div>
+        <div class="chef-info">
+          <h4>Ronald Richards</h4>
+          <p>Chef Assistant</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const cards = document.querySelectorAll(".chef-card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = index * 0.2 + "s";
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+
+});
+</script>
+
+
+
+<section class="stackly-app">
+
+<div class="app-box">
+
+<!-- LEFT CONTENT -->
+<div class="app-text">
+
+<span class="tag">DOWNLOAD APP</span>
+
+<h2>Download Stackly Food App <br> Order Today!</h2>
+
+<div class="store-buttons">
+
+<a href="404.html" class="store-btn apple">
+<img src="images/pq (1).webp">
+<span>Get it on <br> APP STORE</span>
+</a>
+
+<a href="404.html" class="store-btn play">
+<img src="images/pq (2).webp">
+<span>Get it on <br> GOOGLE PLAY</span>
+</a>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT PHONES -->
+<div class="phones">
+
+<img src="images/kl.webp" class="phone phone-left">
+<img src="images/cicrle (1).webp" class="phone phone-right">
+
+</div>
+
+<!-- FLOATING DECORATION -->
+<img src="images/GREEN.webp" class="floating leaf">
+<img src="images/f1 (1).webp" class="floating tomato">
+
+</div>
+
+</section>
+
+
+
+<section class="stackly-testimonial">
+
+<div class="testimonial-container">
+
+<!-- LEFT CONTENT -->
+<div class="testimonial-left">
+
+<span class="tag">TESTIMONIALS</span>
+
+<h2>What Have Lots Of Happy<br>Customer Feedback</h2>
+
+<div class="line"></div>
+
+<div class="quote-icon">“</div>
+
+<p class="testimonial-text">
+Contrary to popular belief, Lorem Ipsum is not simply random text. 
+It has roots in a piece of classical Latin literature from 45 BC, 
+making it over 2000 years old. Richard McClintock!
+</p>
+
+<div class="testimonial-bottom">
+
+<div class="people">
+<img src="images/kj (2).webp">
+<img src="images/kj (3).webp">
+<img src="images/kj (4).webp">
+</div>
+
+<div class="nav-arrows">
+<span>←</span>
+<span>→</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT IMAGE -->
+<div class="testimonial-right">
+
+<div class="hexagon">
+<img src="images/kj (1).webp">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= IMAGE SCROLL ================= -->
+<section class="image-scroll-section">
+  <div class="image-scroll-wrapper">
+
+    <!-- 7 Images -->
+    <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+    <!-- Duplicate for infinite loop -->
+   <img src="images/P1 (1).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (3).webp" alt="">
+    <img src="images/P1 (4).webp" alt="">
+    <img src="images/P1 (5).webp" alt="">
+    <img src="images/P1 (2).webp" alt="">
+    <img src="images/P1 (1).webp" alt="">
+
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const wrapper = document.querySelector(".image-scroll-wrapper");
+
+  let position = 0;
+  const speed = 0.6; // scroll speed
+
+  function autoScroll() {
+
+    position += speed;
+
+    if (position >= wrapper.scrollWidth / 2) {
+      position = 0;
+    }
+
+    wrapper.style.transform = "translateX(-" + position + "px)";
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  autoScroll();
+
+});
+</script>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+
+<!-- CORNER IMAGES -->
+<img src="images/GREEN.webp" class="footer-left" alt="">
+
+
+
+<!-- ORANGE CONTACT BOX -->
+<div class="footer-contact-box">
+
+<div>
+<h4>Address</h4>
+<p>4648 Rocky Road Philadelphia</p>
+</div>
+
+<div>
+<h4>Send Email</h4>
+<p>info@example.com</p>
+</div>
+
+<div>
+<h4>Call Emergency</h4>
+<p>+88 0123 654 99</p>
+</div>
+
+</div>
+
+
+<!-- FOOTER CONTENT -->
+<div class="footer-content">
+
+<!-- COLUMN 1 -->
+<div class="footer-col">
+<h3 class="logo-title">
+  <a href="index.html">
+    <img src="images/logo10 (2).png" alt="Stackly Logo">
+  </a>
+</h3>
+<p>
+Phasellus ultricies aliquam volutpat ullamcorper laoreet neque.
+Curabitur lacinia mollis.
+</p>
+
+<!-- SOCIAL ICONS -->
+<div class="footer-social">
+<a href="404.html"><i class="fab fa-facebook-f"></i></a>
+<a href="404.html"><i class="fab fa-instagram"></i></a>
+<a href="404.html"><i class="fab fa-twitter"></i></a>
+<a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+</div>
+
+
+<!-- COLUMN 2 -->
+<div class="footer-col">
+
+<h4>Quick Links</h4>
+
+<ul>
+<li><a href="404.html">About Us</a></li>
+<li><a href="404.html">Our Gallery</a></li>
+<li><a href="404.html">Our Blogs</a></li>
+<li><a href="404.html">FAQ's</a></li>
+<li><a href="404.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+<div class="footer-col">
+
+<h4>Our Menu</h4>
+
+<ul>
+<ul>
+<li><a href="404.html">Burger King</a></li>
+<li><a href="404.html">Pizza King</a></li>
+<li><a href="404.html">Fresh Food</a></li>
+<li><a href="404.html">Vegetable</a></li>
+<li><a href="404.html">Desserts</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 4 -->
+<div class="footer-col">
+
+<h4>Newsletter</h4>
+
+<p>Subscribe to get latest updates</p>
+<div class="subscribe-box">
+
+<input type="email" id="emailInput" placeholder="Your email address">
+
+<button id="subscribeBtn" type="button">
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</div>
+
+<p id="emailError" style="color:red;font-size:14px;margin-top:6px;"></p>
+
+</div>
+</div>
+
+<!-- FOOTER BOTTOM -->
+<div class="footer-bottom">
+
+<p>© All Copyright 2024 by Stackly</p>
+
+<div>
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Terms & Condition
+</span>
+
+<span onclick="window.location.href='404.html'" style="cursor:pointer;">
+Privacy Policy
+</span>
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+  
+  document.getElementById("subscribeBtn").addEventListener("click", function () {
+
+let email = document.getElementById("emailInput").value.trim();
+let error = document.getElementById("emailError");
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(email === ""){
+error.innerText = "Please enter your email address";
+return;
+}
+
+if(!emailPattern.test(email)){
+error.innerText = "Please enter a valid email address";
+return;
+}
+
+/* clear error */
+error.innerText = "";
+
+/* redirect */
+window.location.href = "404.html";
+
+});
+</script>
+
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

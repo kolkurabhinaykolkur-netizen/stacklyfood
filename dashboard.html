@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Stackly Restaurant Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+/* GLOBAL */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f7fb;
+overflow-x:hidden;
+}
+
+/* DASHBOARD */
+.dashboard{
+display:flex;
+min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:240px;
+background:#150132;
+color:white;
+padding:25px;
+transition:.4s;
+position:relative;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:12px;
+margin:10px 0;
+cursor:pointer;
+border-radius:6px;
+}
+
+.sidebar li:hover{
+background:#6f2bae;
+}
+
+.close-btn{
+display:none;
+position:absolute;
+top:15px;
+right:18px;
+font-size:22px;
+cursor:pointer;
+}
+
+/* MAIN */
+.main{
+flex:1;
+padding:25px;
+}
+
+.hamburger{
+display:none;
+font-size:26px;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+.back-btn{
+background:#150132;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:8px;
+margin-bottom:20px;
+cursor:pointer;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+height:140px;
+color:white;
+padding:25px;
+border-radius:12px;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.card h3,
+.card p{
+position:relative;
+z-index:2;
+}
+
+/* CARD BACKGROUNDS */
+
+.total{
+background:url("images/l (1).webp") center/cover;
+}
+
+.active-card{
+background:url("images/l (2).webp") center/cover;
+}
+
+.offline-card{
+background:url("images/l (3).webp") center/cover;
+}
+
+.patient{
+background:url("images/nh (1).webp") center/cover;
+}
+
+/* CHARTS */
+
+.charts{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:20px;
+}
+
+.chart-box{
+background:white;
+border-radius:12px;
+padding:20px;
+height:320px;
+}
+
+.chart-box canvas{
+width:100%!important;
+height:100%!important;
+}
+
+/* TABLE */
+
+.device-table{
+margin-top:40px;
+background:white;
+padding:20px;
+border-radius:12px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hamburger{
+display:block;
+}
+
+.close-btn{
+display:block;
+}
+
+.sidebar{
+position:fixed;
+top:0;
+left:-260px;
+height:100%;
+z-index:999;
+}
+
+.sidebar.show{
+left:0;
+}
+
+.dashboard{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+<h2>Stackly</h2>
+
+<div class="close-btn" onclick="toggleMenu()">✖</div>
+
+<ul>
+<li>Dashboard</li>
+<li>Orders</li>
+<li>Menu</li>
+<li>Analytics</li>
+<li onclick="go404()">Settings</li>
+</ul>
+
+</div>
+
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<h1>Stackly Restaurant Dashboard</h1>
+
+<button class="back-btn" onclick="goHome()">⬅ Go Back</button>
+
+<!-- CARDS -->
+<div class="cards">
+
+<div class="card total">
+<h3>Total Orders</h3>
+<p>128</p>
+</div>
+
+<div class="card active-card">
+<h3>Active Tables</h3>
+<p>42</p>
+</div>
+
+<div class="card offline-card">
+<h3>Cancelled Orders</h3>
+<p>16</p>
+</div>
+
+<div class="card patient">
+<h3>Customers</h3>
+<p>342</p>
+</div>
+
+</div>
+
+<!-- CHARTS -->
+<div class="charts">
+
+<div class="chart-box"><canvas id="lineChart"></canvas></div>
+<div class="chart-box"><canvas id="barChart"></canvas></div>
+<div class="chart-box"><canvas id="pieChart"></canvas></div>
+<div class="chart-box"><canvas id="doughnutChart"></canvas></div>
+<div class="chart-box"><canvas id="radarChart"></canvas></div>
+<div class="chart-box"><canvas id="polarChart"></canvas></div>
+<div class="chart-box"><canvas id="scatterChart"></canvas></div>
+
+</div>
+
+<!-- TABLE -->
+<div class="device-table">
+
+<h2>Recent Orders</h2>
+
+<table>
+<tr>
+<th>Customer</th>
+<th>Item</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>John</td>
+<td>Chicken Burger</td>
+<td>Completed</td>
+</tr>
+
+<tr>
+<td>Sarah</td>
+<td>Pizza</td>
+<td>Preparing</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* SIDEBAR */
+function toggleMenu(){
+document.getElementById("sidebar").classList.toggle("show");
+}
+
+function goHome(){
+window.location.href="index.html";
+}
+
+function go404(){
+window.location.href="404.html";
+}
+
+const options={responsive:true,maintainAspectRatio:false};
+
+/* LINE */
+new Chart(document.getElementById("lineChart"),{
+type:"line",
+data:{
+labels:["Mon","Tue","Wed","Thu","Fri"],
+datasets:[{data:[12,19,10,22,18],borderColor:"#150132",tension:.4}]
+},
+options
+});
+
+/* BAR */
+new Chart(document.getElementById("barChart"),{
+type:"bar",
+data:{
+labels:["Burger","Pizza","Pasta","Drinks"],
+datasets:[{data:[30,22,18,15],backgroundColor:"#6f2bae"}]
+},
+options
+});
+
+/* PIE */
+new Chart(document.getElementById("pieChart"),{
+type:"pie",
+data:{
+labels:["Dine In","Takeaway","Online"],
+datasets:[{data:[50,30,20],backgroundColor:["green","orange","red"]}]
+},
+options
+});
+
+/* DOUGHNUT */
+new Chart(document.getElementById("doughnutChart"),{
+type:"doughnut",
+data:{
+labels:["Cash","Card","UPI"],
+datasets:[{data:[40,35,25],backgroundColor:["#6f2bae","#150132","#f39c12"]}]
+},
+options
+});
+
+/* RADAR */
+new Chart(document.getElementById("radarChart"),{
+type:"radar",
+data:{
+labels:["Taste","Service","Speed","Quality","Ambience"],
+datasets:[{data:[90,85,80,88,75],backgroundColor:"rgba(111,43,174,.3)",borderColor:"#6f2bae"}]
+},
+options
+});
+
+/* POLAR */
+new Chart(document.getElementById("polarChart"),{
+type:"polarArea",
+data:{
+labels:["Burger","Pizza","Pasta","Fries"],
+datasets:[{data:[11,16,7,14],backgroundColor:["red","blue","green","orange"]}]
+},
+options
+});
+
+/* SCATTER */
+new Chart(document.getElementById("scatterChart"),{
+type:"scatter",
+data:{
+datasets:[{
+label:"Customer Visits",
+data:[{x:1,y:5},{x:2,y:8},{x:3,y:6},{x:4,y:10}],
+backgroundColor:"#150132"
+}]
+},
+options
+});
+
+</script>
+
+</body>
+</html>

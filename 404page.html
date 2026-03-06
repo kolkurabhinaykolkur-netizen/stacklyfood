@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 | Stackly Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* PAGE STYLE */
+
+.stackly-404{
+height:100vh;
+background:#0b1315;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+/* CONTENT */
+
+.error-box{
+max-width:600px;
+animation:fadeUp 1s ease;
+}
+
+.error-box h1{
+font-size:120px;
+color:#d4a762;
+letter-spacing:10px;
+margin-bottom:10px;
+}
+
+.error-box h2{
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+.error-box p{
+color:#ccc;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+/* BUTTON */
+
+.error-box a{
+display:inline-block;
+padding:12px 30px;
+border:1px solid #d4a762;
+color:#d4a762;
+text-decoration:none;
+letter-spacing:2px;
+transition:0.3s;
+}
+
+.error-box a:hover{
+background:#d4a762;
+color:#07112f;
+}
+
+/* animation */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* mobile */
+
+@media(max-width:600px){
+
+.error-box h1{
+font-size:80px;
+}
+
+.error-box h2{
+font-size:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="stackly-404">
+
+<div class="error-box">
+
+<h1>404</h1>
+
+<h2>PAGE NOT FOUND</h2>
+
+<p>
+Oops! The page you're looking for doesn’t exist.
+Return to Stackly Restaurant homepage and continue
+exploring our delicious dining experience.
+</p>
+
+<a href="home2.html">BACK TO HOME</a>
+
+</div>
+
+</section>
+
+</body>
+</html>
