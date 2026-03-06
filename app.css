@@ -3111,3 +3111,157 @@ height: 100px;
 }
 
 }
+
+
+
+
+
+
+
+
+
+/* =========================
+TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 992px){
+
+.blog-wrapper{
+    flex-direction: column;
+    gap:40px;
+    padding:0 20px;
+}
+
+.blog-main{
+    width:100%;
+}
+
+.blog-sidebar{
+    width:100%;
+}
+
+.blog-main-img{
+    width:100%;
+    height:auto;
+}
+
+.blog-food-img{
+    width:100%;
+    height:auto;
+}
+
+.blog-author{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.comment{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.form-row{
+    flex-direction:column;
+    gap:15px;
+}
+
+}
+
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+.stackly-blog-page{
+    padding:60px 0;
+}
+
+.blog-title{
+    font-size:28px;
+    line-height:1.3;
+}
+
+.blog-meta{
+    font-size:14px;
+}
+
+.blog-main p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.blog-author img{
+    width:60px;
+    height:60px;
+}
+
+.comment img{
+    width:50px;
+    height:50px;
+}
+
+.comment h4{
+    font-size:16px;
+}
+
+.comment p{
+    font-size:14px;
+}
+
+.comment-form textarea{
+    width:100%;
+    min-height:120px;
+}
+
+.comment-form input{
+    width:100%;
+}
+
+.comment-form button{
+    width:100%;
+}
+
+.insta-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+
+.search-box{
+    width:100%;
+}
+
+}
+
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+.blog-title{
+    font-size:24px;
+}
+
+.blog-main p{
+    font-size:14px;
+}
+
+.blog-meta{
+    font-size:13px;
+}
+
+.insta-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.comment-form button{
+    padding:14px;
+    font-size:15px;
+}
+
+}
