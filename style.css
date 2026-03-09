@@ -4303,3 +4303,29 @@ height:100px;
 width:auto;
 display:block;
 }
+
+
+
+
+
+/* Dropdown Menu Background */
+.dropdown-menu{
+background-color:#0f172a;   /* change background color */
+padding:10px 0;
+border-radius:8px;
+}
+
+/* Dropdown Links */
+.dropdown-menu li a{
+color:#ffffff;   /* text color */
+padding:10px 20px;
+display:block;
+text-decoration:none;
+font-weight:500;
+}
+
+/* Hover Effect */
+.dropdown-menu li a:hover{
+background-color:#2563eb;   /* hover background */
+color:#ffffff;
+}

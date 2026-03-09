@@ -282,47 +282,79 @@ icon.innerText="👁";
 
 /* FORM VALIDATION */
 
-document.getElementById("authForm").addEventListener("submit",function(e){
+document.getElementById("authForm").addEventListener("submit", function(e) {
 
 e.preventDefault();
 
-let email=document.getElementById("email").value.trim();
-let password=document.getElementById("password").value.trim();
-let name=document.getElementById("name").value.trim();
-let confirm=document.getElementById("confirmPassword").value.trim();
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+let name = document.getElementById("name");
+let confirm = document.getElementById("confirmPassword");
 
-let error=document.getElementById("error");
+let valid = true;
 
-if(register){
+/* REGISTER VALIDATION */
 
-if(name=="" || email=="" || password=="" || confirm==""){
+if (register) {
 
-error.innerText="Please fill all fields";
-return;
+if (name.value.trim() === "") {
+name.placeholder = "Please enter your name";
+name.style.border = "2px solid red";
+valid = false;
+}
+
+if (email.value.trim() === "") {
+email.placeholder = "Please enter email";
+email.style.border = "2px solid red";
+valid = false;
+}
+
+if (password.value.trim() === "") {
+password.placeholder = "Enter password";
+password.style.border = "2px solid red";
+valid = false;
+}
+
+if (confirm.value.trim() === "") {
+confirm.placeholder = "Confirm password";
+confirm.style.border = "2px solid red";
+valid = false;
+}
+
+if (password.value !== confirm.value) {
+confirm.value = "";
+confirm.placeholder = "Passwords do not match";
+confirm.style.border = "2px solid red";
+valid = false;
+}
 
 }
 
-if(password!==confirm){
+/* LOGIN VALIDATION */
 
-error.innerText="Passwords do not match";
-return;
+else {
+
+if (email.value.trim() === "") {
+email.placeholder = "Enter your email";
+email.style.border = "2px solid red";
+valid = false;
+}
+
+if (password.value.trim() === "") {
+password.placeholder = "Enter password";
+password.style.border = "2px solid red";
+valid = false;
+}
 
 }
 
-}else{
-
-if(email=="" || password==""){
-
-error.innerText="Please fill all fields";
-return;
-
+if (valid) {
+window.location.href = "404.html";
 }
-
-}
-
-window.location.href="404.html";
 
 });
+
+
 </script>
 
 <!-- ================= IMAGE SCROLL ================= -->
